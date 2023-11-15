@@ -23,7 +23,7 @@ file.copy(file_path, "Q:/PANDEMIC/Novel Coronavirus 2019/2023/SLHD major follow-
 if (file.exists(file_path)) {
   if (winDialog(type = "yesno", message = "Results broken and saved on the desktop. Do you want to delete the original file?") == "YES") {
     if(winDialog(type = "yesno", message = "Close R?") == "YES") {
-      q(save = "no") & file.remove(file_path)
+      quit(save = "no") & file.remove(file_path)
     } else { 
       file.remove(file_path)}
   } else {

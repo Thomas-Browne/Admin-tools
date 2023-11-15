@@ -14,6 +14,7 @@ if (file.exists(paste0(path,'Files to rename'))) {
       Name <- basename(.x) %>% as.character()
       
       file.rename(from = .x, to = paste0(path,"Files to rename/ ", Modified," ", Name))
+      file.rename(from = paste0(path,"Files to rename/"), to = paste0(path,"Renamed files/"))
     }) } else { 
       stop('User cancelled the operation')
     }
